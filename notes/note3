@@ -1,0 +1,29 @@
+I made a very bad mistake and haven't more energy to continue that
+today... I lost all my notes, that I was describing the steps in the last 
+two days. 
+
+The problem was, that I have this 'react-in-1-hour' that was cloned from
+a repository, then I had two different git at the same folder. I didn't
+want to use submodules. So I used this command:
+
+> git clean -ffxd
+
+And this erase my notes, and the modules that was installed in the project...
+I spend a lot of time setting up... But I think that will be only necessary to
+give a 'npm install' and all will be fine... I hope so.
+
+The post were I finally find something nice to work with node.js and react,
+and were I find the git project that is actually being used:
+
+https://hackernoon.com/full-stack-web-application-using-react-node-js-express-and-webpack-97dbd5b9d708
+
+Other sites, my old mistakes and cool tricks are lost... And I'll note to 
+add this file to git right now too... I just have to sleep.
+
+A very important thing, is that the course syntax is very different from
+the local project, because he uses an older version and set up environment
+online, getting React from external links.
+I think that could be cool, to learn while adptating the code.
+
+Please finishes the course in the next time... And resolve the git problem.
+See ya!
