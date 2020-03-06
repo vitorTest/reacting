@@ -56,7 +56,7 @@ class ProductList extends Component{
     this.setState({total: this.state.total + price});
   }
 
-  showProduct(name){
+  showProduct(name){  
     alert("You selected " + name);
   }
 
