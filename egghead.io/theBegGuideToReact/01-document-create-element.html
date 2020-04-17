@@ -1,10 +1,47 @@
 <body>
   <div id="root"></div>
-  <script type="text/javascript">
+  <div id="root-2"></div>
+  <script src="https://unpkg.com/react@16.12.0/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@16.12.0/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.8.3/babel.js"></script>
+  <!-- <script type="text/javascript">
     const rootElement = document.getElementById('root')
-    const element = document.createElement('div')
-    element.textContent = 'Hello World'
-    element.className = 'container'
-    rootElement.appendChild(element)
+    const element = React.createElement('div', {
+      children: [
+        React.createElement('h1', {className: 'create-element-way'}, 'With createElement'), 
+        React.createElement('p', {className: 'advice'}, 
+          'Learn Vanilla-JS, before learning any JS Framework!'),
+        React.createElement('ul', {
+          children: [
+            React.createElement('li', {
+              children: 
+                React.createElement('h3', null, 'how to make marshmallows'),
+            }),
+            React.createElement('li', {
+              children: 
+                React.createElement('h3', null, 'how to bake a toast'),
+            }),
+            React.createElement('li', {
+              children: 
+                React.createElement('h3', null, 'how to cooke a chick'),
+            })
+          ]})
+      ],
+      className: 'creat-element-container',
+    })
+
+    ReactDOM.render(element, rootElement)
+  </script> -->
+
+  <script type="text/babel">
+    const rootElement2 = document.getElementById('root-2')
+
+    const elementJSX = 
+      <div className="babel-container">
+        <h1 className="jsx-way">With JSX/Babel</h1>
+        <p className="advice">Learn Vanilla-JS, before learning any JS Framework!</p>
+      </div>
+
+    ReactDOM.render(elementJSX, rootElement2)
   </script>
 </body>
