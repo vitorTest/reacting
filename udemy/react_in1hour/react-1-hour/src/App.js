@@ -45,9 +45,17 @@ class Total extends Component{
 }
 
 class ProductList extends Component{
+
   constructor(props){
     super(props);
-    this.state = {total: 0};
+    this.state = {
+      total: 0,
+      productList: [
+        {name: "Samsung", price: 500},
+        {name: "iPhone", price: 700},
+        {name: "Motorola", price: 400},
+      ]
+    };
 
     this.calculateTotal = this.calculateTotal.bind(this);
   }
@@ -61,18 +69,23 @@ class ProductList extends Component{
   }
 
   render() {
+
+    const component = this;
+    const products = component.state.productList.map(function(product){
+      return(
+        <App name={product.name} price={product.price} 
+        handleShow={component.showProduct} 
+        handleTotal={component.calculateTotal} />
+      );
+    });
+
     return (
       <div  className="App">
         <div className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <h2>React Store</h2>
-        </div>        
-        <App name="Samsung" price={500} handleShow={this.showProduct} 
-              handleTotal={this.calculateTotal} />
-        <App name="iPhone" price={700} handleShow={this.showProduct} 
-              handleTotal={this.calculateTotal} />
-        <App name="Motorola" price={400} handleShow={this.showProduct} 
-              handleTotal={this.calculateTotal} />
+        </div>       
+        {products} 
         <Total total={this.state.total} />
       </div>
     );
