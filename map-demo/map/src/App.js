@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
 
 import mapboxgl from 'mapbox-gl';
-import ReactMapGL from 'react-map-gl';
-// import mapglToken from './../credentials/mapbox.json';
-mapboxgl.accessToken = require('./../credentials/mapbox.json').token;
+// import ReactMapGL from 'react-map-gl';
+
+import './App.css';
+
+mapboxgl.accessToken = require('./credentials/mapbox.json').token;
+
 
 class App extends Component {
 
@@ -20,10 +21,10 @@ class App extends Component {
 
   componentDidMount() {
     const map = new mapboxgl.Map({
-    container: this.mapContainer,
-    style: 'mapbox://styles/mapbox/streets-v11',
-    center: [this.state.lng, this.state.lat],
-    zoom: this.state.zoom
+      container: this.mapContainer,
+      style: 'mapbox://styles/mapbox/streets-v11',
+      center: [this.state.lng, this.state.lat],
+      zoom: this.state.zoom
     });
 
     map.on('move', () => {
